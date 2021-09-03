@@ -9,9 +9,11 @@
 }
 
 :root.theme-dark {
-    .theme-btn {
+    .theme-btn, .shuffle-btn {
         background-color: #aaa;
         color: black;
+    }
+    .theme-btn {
         &::after {
             content: 'Light';
         }
@@ -25,9 +27,12 @@
 }
 
 :root.theme-light {
-    .theme-btn {
+    .theme-btn, .shuffle-btn {
         background-color: #000;
         color: #aaa;
+    }
+
+    .theme-btn {
         &::after {
             content: 'Dark';
         }
@@ -121,11 +126,9 @@ h1 {
     cursor: pointer;
     font-size: 2rem;
     font-weight: bold;
-    background-color: blue;
-    color: white;
     margin-bottom: 2rem;
     border-radius: 6px;
-    box-shadow: gray 0px 2px 2px;
+    box-shadow: var(--clr-shadow) 0px 2px 2px;
     &:hover {
         opacity: 0.7;
     }
@@ -193,7 +196,7 @@ h1 {
         font-size: 4rem;
 
         &--red {
-            background-color: red;
+            background-color: rgb(218, 67, 67);
             color: white;
         }
 
@@ -203,12 +206,12 @@ h1 {
         }
 
         &--blue {
-            background-color: blue;
+            background-color: rgb(88, 88, 194);
             color: white;
         }
 
         &--green {
-            background-color: green;
+            background-color: rgb(5, 185, 5);
             color: white;
         }
 
