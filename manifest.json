@@ -21,7 +21,7 @@
             "purpose": "maskable"
         }
     ],
-    "start_url": "/",
+    "start_url": "/arrange-16/",
     "background_color": "#eee",
     "display": "standalone",
     "scope": "/",
