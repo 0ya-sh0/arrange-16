@@ -1,0 +1,30 @@
+{
+    "short_name": "Arrange-16",
+    "name": "Arrange-16 | The Game",
+    "icons": [
+        {
+            "src": "icon.png",
+            "type": "image/png",
+            "sizes": "108x108",
+            "purpose": "any"
+        },
+        {
+            "src": "icon-splash.png",
+            "type": "image/png",
+            "sizes": "467x467",
+            "purpose": "any"
+        },
+        {
+            "src": "icon.png",
+            "type": "image/png",
+            "sizes": "108x108",
+            "purpose": "maskable"
+        }
+    ],
+    "start_url": "/?source=pwa",
+    "background_color": "#eee",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#eee",
+    "description": "HTML, CSS, JS based puzzle game"
+}
