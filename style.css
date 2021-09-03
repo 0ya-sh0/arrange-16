@@ -8,6 +8,36 @@
   font-size: 10px;
 }
 
+:root.theme-dark {
+  --clr-bg: black;
+  --clr-surface: #333;
+  --clr-shadow: #111;
+  --clr-on-bg: white;
+  --clr-on-surface: #000;
+}
+:root.theme-dark .theme-btn {
+  background-color: #aaa;
+  color: black;
+}
+:root.theme-dark .theme-btn::after {
+  content: "Light";
+}
+
+:root.theme-light {
+  --clr-bg: #eee;
+  --clr-surface: white;
+  --clr-shadow: #aaa;
+  --clr-on-bg: black;
+  --clr-on-surface: #555;
+}
+:root.theme-light .theme-btn {
+  background-color: #000;
+  color: #aaa;
+}
+:root.theme-light .theme-btn::after {
+  content: "Dark";
+}
+
 @media screen and (max-width: 600px) {
   :root {
     font-size: 9px;
@@ -35,7 +65,7 @@
 }
 body {
   min-height: 100vh;
-  background-color: #eee;
+  background-color: var(--clr-bg);
 }
 
 h1 {
@@ -43,11 +73,12 @@ h1 {
   text-align: center;
   font-family: monospace, sans-serif;
   letter-spacing: 1rem;
-  margin-top: 2rem;
+  margin-top: 5rem;
+  color: var(--clr-on-bg);
 }
 
 .info {
-  background-color: white;
+  background-color: var(--clr-surface);
   padding: 3rem;
   border-radius: 6px;
   margin: 5rem auto 2rem;
@@ -68,7 +99,7 @@ h1 {
   content: ":";
 }
 .info__text {
-  color: #555;
+  color: var(--clr-on-surface);
   font-size: 2.2rem;
 }
 
@@ -87,17 +118,32 @@ h1 {
   box-shadow: gray 0px 2px 2px;
 }
 .shuffle-btn:hover {
-  box-shadow: none;
+  opacity: 0.7;
+}
+
+.theme-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 2rem;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 6px;
+  box-shadow: var(--clr-shadow) 0px 2px 2px;
+}
+.theme-btn:hover {
   opacity: 0.7;
 }
 
 .board {
   margin: auto;
-  background-color: white;
+  background-color: var(--clr-surface);
   width: 50rem;
   height: 62rem;
   border-radius: 2.4rem;
-  box-shadow: #aaa 0px 1px 2px;
+  box-shadow: var(--clr-shadow) 0px 1px 2px;
   padding: 1rem;
   margin-bottom: 5rem;
   display: grid;
@@ -109,7 +155,7 @@ h1 {
   height: 10rem;
   margin: 1rem;
   border-radius: 1.2rem;
-  box-shadow: #aaa 0px 1px 5px;
+  box-shadow: var(--clr-shadow) 0px 1px 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,12 +190,12 @@ h1 {
   background-color: blue;
   color: white;
 }
-.board__cell--black {
-  background-color: black;
+.board__cell--green {
+  background-color: green;
   color: white;
 }
 .board__cell--empty {
-  background-color: #eee;
+  background-color: var(--clr-bg);
 }
 
 /*# sourceMappingURL=style.css.map */
