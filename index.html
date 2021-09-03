@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrang 16</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Arrange 16</h1>
+
+    <section class="info">
+        <span class="info__label">Goal</span>
+        <span class="info__text">Arrange all the 16 tiles in the correct sequence</span>
+        <span class="info__label">Controls</span>
+        <span class="info__text">Click/Tap on the cell to swap it with its empty neighbouring cell (if any)</span>
+    </section>
+
+    <button class="shuffle-btn" onclick="shuffle()">Shuffle</button>
+
+    <div class="board">
+        <div class="board__box" id="box1" onclick='handleClick("box1")'>
+            <span class="board__cell board__cell--red">1</span>
+        </div>
+        <div class="board__box" id="box2" onclick='handleClick("box2")'>
+            <span class="board__cell board__cell--red">2</span>
+        </div>
+        <div class="board__box" id="box3" onclick='handleClick("box3")'>
+            <span class="board__cell board__cell--red">3</span>
+        </div>
+        <div class="board__box" id="box4" onclick='handleClick("box4")'>
+            <span class="board__cell board__cell--red">4</span>
+        </div>
+
+        <div class="board__box" id="box5" onclick='handleClick("box5")'>
+            <span class="board__cell board__cell--orange">5</span>
+        </div>
+        <div class="board__box" id="box6" onclick='handleClick("box6")'>
+            <span class="board__cell board__cell--orange">6</span>
+        </div>
+        <div class="board__box" id="box7" onclick='handleClick("box7")'>
+            <span class="board__cell board__cell--orange">7</span>
+        </div>
+        <div class="board__box" id="box8" onclick='handleClick("box8")'>
+            <span class="board__cell board__cell--orange">8</span>
+        </div>
+
+        <div class="board__box" id="box9" onclick='handleClick("box9")'>
+            <span class="board__cell board__cell--blue">9</span>
+        </div>
+        <div class="board__box" id="box10" onclick='handleClick("box10")'>
+            <span class="board__cell board__cell--blue">10</span>
+        </div>
+        <div class="board__box" id="box11" onclick='handleClick("box11")'>
+            <span class="board__cell board__cell--blue">11</span>
+        </div>
+        <div class="board__box" id="box12" onclick='handleClick("box12")'>
+            <span class="board__cell board__cell--blue">12</span>
+        </div>
+
+        <div class="board__box" id="box13" onclick='handleClick("box13")'>
+            <span class="board__cell board__cell--black">13</span>
+        </div>
+        <div class="board__box" id="box14" onclick='handleClick("box14")'>
+            <span class="board__cell board__cell--black">14</span>
+        </div>
+        <div class="board__box" id="box15" onclick='handleClick("box15")'>
+            <span class="board__cell board__cell--black">15</span>
+        </div>
+        <div class="board__box" id="box16" onclick='handleClick("box16")'>
+            <span class="board__cell board__cell--black">16</span>
+        </div>
+        
+        <div class="board__box board__box--last" id="box17" onclick='handleClick("box17")'>
+            <span class="board__cell board__cell--empty"></span>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
